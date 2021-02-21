@@ -1,0 +1,273 @@
+                /* Genereal Styling*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+
+body {
+    margin: 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.my-profile .profile-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+}
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+}
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #05052a;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+                            /* Nav styling */
+nav {
+    position: relative;
+    width: 100%;
+    background-color: #05052a;
+    height: 15vh;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.row{
+    height: 100%;
+}
+.column {
+    float: left;
+}
+nav .left {
+  width: 20%;
+  height: 100%;
+}
+nav img{
+    width: auto;
+    height: 80%;
+    display: block;
+    margin: 0.5rem auto;
+}
+nav .center {
+    width: 60%;
+    font-family: 'poppins', sans-serif;
+    font-weight: 700;
+    font-size: 7vh;
+    height: 100%;
+    color: crimson;
+
+}
+nav .right {
+    width: 20%;
+    height: 100%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.heading{
+    padding: 2vh 0;
+}
+.line{
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    margin: 5px;
+}
+.nav-links{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-around;
+    letter-spacing: 1px;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    background: #1515b6;
+    clip-path: circle(0px at 100% 0%);
+    -webkit-clip-path: circle(0px at 100% 0%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    z-index: 2;
+    /* display: none; */
+}
+.nav-links.open{
+    clip-path: circle(1800px at 100% 0%);
+    -webkit-clip-path: circle(1800px at 100% 0%);
+    pointer-events: all;
+}
+.hamburger{
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 10;
+}
+.nav-links li{
+    opacity: 0;
+}
+li.fade{
+    opacity: 1;
+}
+
+.nav-links li a{
+    color: white;
+    font-size: 25px;
+    font-family: 'poppins', sans-serif;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 3px 0;
+}
+.nav-links li a::before,
+.nav-links li a::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: crimson;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+}
+.nav-links li a::before{
+    top: 0;
+    transform-origin: left;
+}
+.nav-links li a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+.nav-links li a:hover::before,
+.nav-links li a:hover::after{
+    transform: scaleX(1);
+    transition: all 0.5s ease;
+}
+.nav-links li:nth-child(1){
+    transition: all 0.5s ease 0.1s;
+}
+.nav-links li:nth-child(2){
+    transition: all 0.5s ease 0.2s;
+}
+.nav-links li:nth-child(3){
+    transition: all 0.5s ease 0.3s;
+}
+.nav-links li:nth-child(4){
+    transition: all 0.5s ease 0.4s;
+}
+.nav-links li:nth-child(5){
+    transition: all 0.5s ease 0.5s;
+}
+.nav-links li:nth-child(6){
+    transition: all 0.5s ease 0.6s;
+}
+.nav-links li:nth-child(7){
+    transition: all 0.5s ease 0.7s;
+}
+
+
+.fas{
+    margin: 5px;
+}
+
+                            /* my profile styling */
+
+.my-profile{
+    min-height: 90vh;
+}
+.my-profile .title{
+    color: #05052a;
+}
+.my-profile .title::after{
+    content: "Who I am";
+}
+.my-profile .profile-content .left{
+    width: 45%;
+}
+.my-profile .profile-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.my-profile .profile-content .right{
+    width: 55%;
+}
+.my-profile .profile-content .right .text{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+.my-profile .profile-content .right .text span{
+    color: crimson;
+    font-size: 32px;
+}
+.my-profile .profile-content .right p{
+    text-align: justify;
+    font-weight: 500;
+}
+.my-profile .profile-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 7px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.my-profile .profile-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+                            /* footer styling*/
+footer{
+    clear: both;
+    font-family: "Poppins", sans-serif;
+    background:  #05052a;
+    padding: 20px 23px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 23px;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
