@@ -124,8 +124,8 @@ nav .right {
     /* display: none; */
 }
 .nav-links.open{
-    clip-path: circle(1800px at 100% 0%);
-    -webkit-clip-path: circle(1800px at 100% 0%);
+    clip-path: circle(2200px at 100% 0%);
+    -webkit-clip-path: circle(2200px at 100% 0%);
     pointer-events: all;
 }
 .hamburger{
